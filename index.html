@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Sublime Lorem Text by ccpalettes</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/ccpalettes/sublime-lorem-text">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Sublime Lorem Text</h1>
+            <h2>LoremText is a plugin for sublime text 2 that creates random/fixed lorem ipsum text.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/ccpalettes/sublime-lorem-text/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/ccpalettes/sublime-lorem-text/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>LoremText</h1>
+
+<p><a href="https://github.com/ccpalettes/sublime-lorem-text">LoremText</a> is a plugin for
+<a href="http://www.sublimetext.com/">sublime text 2</a> that creates random/fixed lorem
+ipsum text. Lorem ipsum is commonly used as placeholder text before you have the
+real meaningful content.</p>
+
+<h4>If you are using <a href="http://www.sublimetext.com/3">sublime text 3</a>, please visit <a href="https://github.com/ccpalettes/sublime-lorem-text/tree/sublime-text-3-beta">LoremText plugin for sublime text 3</a>.</h4>
+
+<h2>Installation</h2>
+
+<p><strong>With Git:</strong> Clone the repository to the Sublime Text "Packages" directory:</p>
+
+<pre><code>git clone https://github.com/ccpalettes/sublime-lorem-text.git
+</code></pre>
+
+<p>You can open the "Packages" directory by following the steps below:</p>
+
+<ul>
+<li>OS X: select menu entry <code>Sublime Text 2 -&gt; Preferences -&gt; Browse Packages...</code>
+</li>
+<li>Windows: select menu entry <code>Preferences -&gt; Browse Packages...</code>
+</li>
+<li>Linux: select menu entry <code>Preferences -&gt; Browse Packages...</code>
+</li>
+</ul><p><strong>Without Git:</strong> <a href="https://github.com/ccpalettes/sublime-lorem-text/archive/master.zip">Download</a>
+the latest source from GitHub and copy the folder to the Sublime Text "Packages"
+directory.</p>
+
+<h2>Usage</h2>
+
+<p>There are a few ways to use the LoremText plugin.</p>
+
+<ul>
+<li><p>Just press the shortcut key (<code>alt+l</code> on all platforms) to insert some lorem
+ipsum text.</p></li>
+<li><p>Type <code>lorem({word_count}, {paragraph_count})</code> in your file, make sure that the
+input curosr is within the region of the <code>lorem{?, ?}</code> expression, then press
+the shortcut key (<code>alt+l</code>). Parameter "word_count" represents how many paragraphs
+to insert and parameter "paragraph_count" represents how many words that each
+paragraph contains. For example, <code>lorem(100, 3)</code> means that it will create three
+paragraphs of lorem ipsum text and each paragraph contains one hundred words.
+Both the two parameters are optional, if you leave them empty, the plugin will
+use default values that are configured in the settings file.</p></li>
+<li><p>Select menu entry <code>Edit -&gt; Lorem Text...</code>, active the sub-menu commands.</p></li>
+<li><p>Go to Command Palette, find "Lorem Text" command.</p></li>
+</ul><h2>Settings</h2>
+
+<p>There are a number of settings available to customize the behavior of LoremText
+and The default settings can be viewed by accessing the <code>Preferences &gt; Package
+Settings &gt; LoremText &gt; Settings – Default</code> menu entry. But make sure all
+customized settings should be saved to Settings – User to prevent them from
+being overridden during an upgrade.</p>
+
+<ul>
+<li><p><code>default_paragraph_count</code> <em>(Number)</em> The default number of parapraphs to be
+inserted.</p></li>
+<li><p><code>default_word_count</code> <em>(Number)</em> The default number of words for each parapraph
+to be inserted.</p></li>
+<li><p><code>always_start_with_lorem_ipsum</code> <em>(Boolean)</em> If true, the generated text will
+always starts with "Lorem ipsum".</p></li>
+<li><p><code>generate_random_text</code> <em>(Boolean)</em> If true, it creates different random text
+content every time, otherwise, it creates text from a fixed content every time
+and the "always start with lorem ipsum" option will be forced enabled.</p></li>
+</ul><h2>License</h2>
+
+<p>The code is under MIT license:</p>
+
+<p>Copyright (c) 2013 <a href="https://github.com/ccpalettes">Jeremy Yu</a> <a href="mailto:ccpalettes@gmail.com">ccpalettes@gmail.com</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/ccpalettes">ccpalettes</a> can be found on <a href="https://github.com/ccpalettes/sublime-lorem-text">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
