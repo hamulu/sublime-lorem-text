@@ -1,42 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
     <title>Sublime Lorem Text by ccpalettes</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
+
   <body>
-    <div class="wrapper">
+    <a id="forkme_banner" href="https://github.com/ccpalettes/sublime-lorem-text">View on GitHub</a>
+    <div class="shell">
+
       <header>
-        <h1>Sublime Lorem Text</h1>
-        <p>LoremText is a plugin for sublime text 2 that creates random/fixed lorem ipsum text.</p>
-        <p class="view"><a href="https://github.com/ccpalettes/sublime-lorem-text">View the Project on GitHub <small>ccpalettes/sublime-lorem-text</small></a></p>
-        <ul>
-          <li><a href="https://github.com/ccpalettes/sublime-lorem-text/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/ccpalettes/sublime-lorem-text/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/ccpalettes/sublime-lorem-text">View On <strong>GitHub</strong></a></li>
-        </ul>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Sublime Lorem Text</h1>
+            <h2>LoremText is a plugin for sublime text 2 that generates random/fixed lorem ipsum text</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
       </header>
-      <section>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/ccpalettes/sublime-lorem-text/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/ccpalettes/sublime-lorem-text/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
         <h1>LoremText</h1>
 
-<p><a href="https://github.com/ccpalettes/sublime-lorem-text">LoremText</a> is a plugin for
-<a href="http://www.sublimetext.com/">sublime text 2</a> that creates random/fixed lorem
+<p><a href="http://ccpalettes.github.com/sublime-lorem-text">LoremText</a> is a plugin for
+<a href="http://www.sublimetext.com/">sublime text 2</a> that generates random/fixed lorem
 ipsum text. Lorem ipsum is commonly used as placeholder text before you have the
 real meaningful content.</p>
 
 <h4>If you are using <a href="http://www.sublimetext.com/3">sublime text 3</a>, please visit <a href="https://github.com/ccpalettes/sublime-lorem-text/tree/sublime-text-3-beta">LoremText plugin for sublime text 3</a>.</h4>
 
 <h2>Installation</h2>
+
+<p><strong>With Package Control:</strong> This is the easiest way to install this package. Once you have the <a href="http://wbond.net/sublime_packages/package_control">Package Control</a> installed, open the Command Palette and select <code>Package Control: Install Package</code>, then select <code>LoremText</code> when the package list appears.</p>
 
 <p><strong>With Git:</strong> Clone the repository to the Sublime Text "Packages" directory:</p>
 
@@ -58,19 +79,23 @@ directory.</p>
 
 <h2>Usage</h2>
 
-<p>There are a few ways to use the LoremText plugin.</p>
+<p>There are four ways to use the LoremText plugin.</p>
 
 <ul>
-<li><p>Just press the shortcut key (<code>alt+l</code> on all platforms) to insert some lorem
-ipsum text.</p></li>
-<li><p>Type <code>lorem({word_count}, {paragraph_count})</code> in your file, make sure that the
+<li>Just press the shortcut key (<code>alt+l</code> on all platforms) to insert some lorem
+ipsum text.</li>
+<li>
+<p>Type <code>lorem({word_count}, {paragraph_count})</code> in your file, make sure that the
 input curosr is within the region of the <code>lorem{?, ?}</code> expression, then press
 the shortcut key (<code>alt+l</code>). Parameter "word_count" represents how many paragraphs
 to insert and parameter "paragraph_count" represents how many words that each
 paragraph contains. For example, <code>lorem(100, 3)</code> means that it will create three
 paragraphs of lorem ipsum text and each paragraph contains one hundred words.
 Both the two parameters are optional, if you leave them empty, the plugin will
-use default values that are configured in the settings file.</p></li>
+use default values that are configured in the settings file.</p>
+
+<p><img src="https://raw.github.com/ccpalettes/sublime-lorem-text/gh-pages/screenshots/example.gif" alt="Screenshot Example"></p>
+</li>
 <li><p>Select menu entry <code>Edit -&gt; Lorem Text...</code>, active the sub-menu commands.</p></li>
 <li><p>Go to Command Palette, find "Lorem Text" command.</p></li>
 </ul><h2>Settings</h2>
@@ -115,12 +140,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</p>
       </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/ccpalettes">ccpalettes</a> can be found on <a href="https://github.com/ccpalettes/sublime-lorem-text">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/ccpalettes">ccpalettes</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
   </body>
 </html>
